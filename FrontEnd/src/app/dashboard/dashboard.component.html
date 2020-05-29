@@ -1,0 +1,174 @@
+<app-nav></app-nav>
+
+<div class="container mt-5">
+    <div class="row ">
+
+        <div class="col-lg-12 col-md-12 col-xs-12">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                        <div class="card-header" style="text-align: center;">Total Issue</div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center;">{{dashboardCount?.allIssues}}</h5>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem; max-height: 10rem;">
+                        <div class="card-header" style="text-align: center;">Issue Assigned to you</div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center;">{{dashboardCount?.assignedToUser}}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                        <div class="card-header"style="text-align:center;">Issue Posted By You</div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center;"> {{dashboardCount?.createdByUser}}</h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row ">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-inprogress">
+                        <div class="icon">
+                            <i class="fa fa-hourglass-start"></i>
+                        </div>
+                        <div class="content">
+                            <div class="text">In-Progress</div>
+
+                            <div class="number count-to" id="active1">
+                                {{dashboardCount?.inProgress}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-inbacklog ">
+                        <div class="icon">
+                            <i class="fa fa-backward"></i>
+                        </div>
+                        <div class="content">
+                            <div class="text">In-Backlog</div>
+
+                            <div class="number count-to" id="active2">
+                                {{dashboardCount?.inBacklog}}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-intest">
+                        <div class="icon">
+                            <i class="fa fa-wrench"></i>
+                        </div>
+                        <div class="content">
+                            <div class="text">In-Test</div>
+
+                            <div class="number count-to" id="active3">
+                                {{dashboardCount?.inTest}}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-orange">
+                        <div class="icon">
+                            <i class="fa fa-check-square-o"></i>
+                        </div>
+                        <div class="content">
+                            <div class="text">Done</div>
+
+                            <div class="number count-to" id="active4">
+                                {{dashboardCount?.inDone}}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <button type="button" class="btn btn-success" [routerLink]="['/create']">Create new issue</button>
+    <div class="mt-5">
+        <!-- <table datatable [dtOptions]="dtOptions" class="table table-sm table-striped table-responsive">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Reported By</th>
+                    <th class="d-none">Id</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="issues?.length != 0">
+                <tr *ngFor="let issue of issues">
+                    <td>{{ issue.title }}</td>
+                    <td>{{ issue.createdOn | date:'medium' }}</td>
+                    <td>{{ issue.status }}</td>
+                    <td>{{ issue.createdBy }}</td>
+                    <td class="d-none">{{ issue.issueId }}</td>
+                    <td><a class="text-primary" [routerLink]="['/view',issue.issueId]"
+                            routerLinkActive="router-link-active">View</a></td>
+                </tr>
+            </tbody>
+            <tbody *ngIf="issues?.length == 0">
+                <tr>
+                    <td colspan="5" class="no-data-available">No data!</td>
+                </tr>
+            <tbody>
+        </table> -->
+
+        <table class="table table-sm" datatable [dtOptions]="dtOptions">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Reported By</th>
+                <th class="d-none">Id</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="issues?.length != 0">
+                <tr *ngFor="let issue of issues">
+                    <td>{{ issue.title }}</td>
+                    <td>{{ issue.createdOn | date:'medium' }}</td>
+                    <td>{{ issue.status }}</td>
+                    <td>{{ issue.createdBy }}</td>
+                    <td class="d-none">{{ issue.issueId }}</td>
+                    <td><a class="text-primary" [routerLink]="['/view',issue.issueId]"
+                            routerLinkActive="router-link-active">View</a></td>
+                </tr>
+            </tbody>
+            <tbody *ngIf="issues?.length == 0">
+                <tr>
+                    <td colspan="5" class="no-data-available">No data!</td>
+                </tr>
+            <tbody>
+          </table>
+    </div>
+
+</div>
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="small" color="#e95420" type="ball-spin-clockwise-fade-rotating">
+    <p style="font-size: 14px; color: #ccc">Loading...</p>
+</ngx-spinner>
+<router-outlet></router-outlet>

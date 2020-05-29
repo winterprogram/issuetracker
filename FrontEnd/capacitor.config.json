@@ -1,0 +1,8 @@
+{
+  "appId": "com.test11.app",
+  "appName": "Issue Tracker",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "./dist/FrontEnd/",
+  "cordova": {}
+}
