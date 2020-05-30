@@ -7,8 +7,8 @@ let redis = require('redis'),
     /* Values are hard-coded for this example, it's usually best to bring these in via file or environment variable for production */
     client = redis.createClient({
         port: 12264, // replace with your port
-        host: 'redis-12264.c1.asia-northeast1-1.gce.cloud.redislabs.com', // replace with your hostanme or IP address
-        password: 'Abhishek@123'
+        host: 'redis-15204.c89.us-east-1-3.ec2.cloud.redislabs.com:15204', // replace with your hostanme or IP address
+        password: '02aSUzCEwuOOZI2EwMCcoxSJNgQNSN7h'
     });
 client.on('connect', () => {
     console.log("redis connection successfully opened");
