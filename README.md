@@ -6,11 +6,11 @@ Project urls:-
 
 1) Angular :- http://13.127.94.119
 
-   Github Link :- https://github.com/winterprogram/meeting_front
+   Github Link :- https://github.com/winterprogram/issuetracker/FrontEnd
 
 2) Node App :- http://13.235.247.68
 
-    Github Link :- https://github.com/winterprogram/meeting_back
+    Github Link :- https://github.com/winterprogram/issuetracker/Backend
 
 Note :- Node url is protected by Cros, please use localhost:3000 to test Rest apis.
 
