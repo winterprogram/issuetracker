@@ -4,7 +4,7 @@ This application is built to report bug. Typically this web is much more usefull
 
 Project urls:-
 
-1) Angular :- http://13.233.86.6
+1) Angular :- http://13.127.94.119
 
    Github Link :- https://github.com/winterprogram/meeting_front
 
