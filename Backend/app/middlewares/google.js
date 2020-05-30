@@ -13,7 +13,7 @@ const time = require('./../libs/timeLib');
 const passportConfig = {
     clientID: '1091082596943-49t59doqnuiim4fl7nuvt1229md2us09.apps.googleusercontent.com',
     clientSecret: 'Q3ISkgY1ZodiTMZMuFZ8Pj2C',
-    callbackURL: 'http://localhost:3000/api/authentication/google/redirect'
+    callbackURL: 'http://13.235.247.68/api/authentication/google/redirect'
 };
 
 if (passportConfig.clientID) {
