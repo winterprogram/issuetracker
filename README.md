@@ -8,7 +8,7 @@ Project urls:-
 
    Github Link :- https://github.com/winterprogram/meeting_front
 
-2) Node App :- http://15.206.28.103
+2) Node App :- http://13.235.247.68
 
     Github Link :- https://github.com/winterprogram/meeting_back
 

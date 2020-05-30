@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'http://myapp.issuetrackingtool.ga/'  
+  baseUrl: 'http://13.235.247.68/'  
 };
